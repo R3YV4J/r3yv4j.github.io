@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>r3yv4j@kali:~$</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">r3yv4j<span>@kali:~$</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#maquinas">Máquinas</a></li>
+                <li><a href="#courses">Cursos</a></li>
+                <li><a href="#certifications">Certificaciones </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Sobre Mí -->
+        <section id="about">
+            <h2>About me</h2>
+            <div class="about-content">
+                <div class="profile-image"></div>
+                <p>Soy un apasionado de la ciberseguridad y estoy comprometido con el aprendizaje continuo en este campo en constante evolución. Licenciado en el máster en ciberseguridad y ciberinteligencia en la UPV, y especializado en la identificación de vulnerabilidades y en el análisis de seguridad en sistemas y redes.
+                    <br>
+                    <br>
+                    Mi enfoque principal es contribuir a un entorno digital más seguro, aplicando mis conocimientos tanto en áreas técnicas como estratégicas. A través de prácticas y formación especializada, busco perfeccionar mis habilidades en áreas como pentesting, ciberinteligencia y análisis de amenazas.
+                    <br>
+                    <br>
+                    Estoy abierto a colaboraciones y oportunidades que me permitan aportar valor en el ámbito de la ciberseguridad.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Habilidades -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <p>Pentesting</p>
+                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                <p>Hacking Ético</p>
+                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                <p>Análisis de vulnerabilidades</p>
+                <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+                <p>Programación</p>
+                <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+            </div>
+            <!-- ...otras habilidades -->
+        </section>
+
+        <!-- Sección de Máquinas -->
+        <section id="maquinas">
+            <h2>Máquinas</h2>
+            <div class="projects-container">
+                <div class="project-card" onclick="navigateTo('/pages/dockerlabs.html')">
+                    <h3>DockerLabs</h3>
+                    <p>En esta sección encontrarás soluciones detalladas a máquinas de Dockerlabs. Aquí comparto cada paso y explicación, ayudando a otros a comprender mejor la resolución de máquinas y desafíos en entornos Docker.</p>
+                </div>
+                <div class="project-card" onclick="navigateTo('/pages/hackthebox.html')">
+                    <h3>HackTheBox</h3>
+                    <p>En esta sección encontrarás soluciones detalladas a máquinas de HackTheBox. Aquí comparto cada paso y explicación, ayudando a otros a comprender mejor la resolución de máquinas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nueva Sección de Cursos -->
+        <section id="courses">
+            <h2>Cursos</h2>
+            <div class="certifications-carousel">
+                <div class="certification">
+                    <img src="/img/cursos/cisco1.png" alt="Curso 1">
+                    <button onclick="openFullscreen('/img/cursos/c2.png')">Ver Curso</button>
+                </div>
+                <div class="certification">
+                    <img src="/img/cursos/cisco2.png" alt="Curso 2">
+                    <button onclick="openFullscreen('/img/cursos/c1.png')">Ver Curso</button>
+                </div>
+                <div class="certification">
+                    <img src="/img/cursos/incibe.png" alt="Curso 3">
+                    <button onclick="openFullscreen('/img/cursos/incibe.png')">Ver Curso</button>
+                </div>
+                <div class="certification">
+                    <img src="/img/cursos/ihc.png" alt="Curso 4">
+                    <button onclick="openFullscreen('/img/cursos/ihc.png')">Ver Curso</button>
+                </div>
+                <div class="certification">
+                    <img src="/img/cursos/s1.png" alt="Curso 5">
+                    <button onclick="openFullscreen('/img/cursos/s1.png')">Ver Curso</button>
+                </div>
+                <!-- ...otros cursos -->
+            </div>
+            <div class="carousel-indicators">
+                <span class="dot" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <!-- Agrega más puntos según el número de elementos en el carrusel -->
+            </div>
+             <!-- Capa de pantalla completa -->
+            <div class="fullscreen-overlay" id="fullscreenOverlay">
+                <img id="fullscreenImage" src="" alt="Curso en pantalla completa">
+                <button class="close-btn" onclick="closeFullscreen()">Cerrar</button>
+            </div>
+        </section>
+
+        <!-- Sección de Certificaciones -->
+        <section id="certifications">
+            <h2>Certificaciones</h2>
+            <div class="certifications-carousel">
+                <div class="course">
+                    <img src="/img/certs/ejpt.png" alt="Certificación 1">
+                    <button onclick="window.location.href=''">En Curso</button>
+                </div>
+                <div class="course">
+                    <img src="/img/certs/ewpt.png" alt="Certificación 1">
+                    <button onclick="window.location.href=''">Proximamente</button>
+                </div>
+                <!-- ...otras certificaciones -->
+            </div>
+        </section>
+
+        <script src="js/zoom.js"></script>
+        <script src="js/carousel.js"></script>
+        <script src="js/navigation.js"></script> <!-- JavaScript para redirección -->
+
+        <!-- Barra Lateral -->
+        <div class="sidebar">
+            <a href="https://www.linkedin.com/in/javier-diaz-085b53276/" target="_blank">
+                <img src="img/social/l1.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/R3YV4J" target="_blank">
+                <img src="img/social/g1.png" alt="GitHub" />
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=r3yv4j@gmail.com" target="_blank" class="email-link">
+            <img src="img/social/gmail1.png" alt="Email" />
+            </a>
+        </div>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/javier-diaz-085b53276/" target="_blank">
+                    <img src="img/social/l1.png" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com/R3YV4J" target="_blank">
+                    <img src="img/social/g1.png" alt="GitHub" />
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=r3yv4j@gmail.com" target="_blank" class="email-link">
+                    <img src="img/social/gmail1.png" alt="Email" />
+                </a>
+            </div>
+            <p>Conecta conmigo en</p>
+        </footer>
+</body>
+</html>
