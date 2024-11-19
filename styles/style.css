@@ -11,6 +11,9 @@ body {
     color: #d1d5db;
     line-height: 1.6;
     margin-left: 80px; /* Espacio para la barra lateral */
+
+    padding-bottom: 2rem;
+    overflow-x: hidden; /* Elimina el scroll horizontal innecesario */
 }
 
 /* Cabecera y navegación */
@@ -23,6 +26,9 @@ header {
     z-index: 100;
     display: flex;
     justify-content: center; /* Centrar la barra de navegación */
+
+    align-items: center;
+    flex-wrap: wrap; /* Permite ajustar en móviles */
 }
 
 .logo {
@@ -38,16 +44,18 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%; /* Ajuste del ancho para centrar mejor la barra */
-    max-width: 1200px;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 
 .nav-links li a {
@@ -55,6 +63,7 @@ nav {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .nav-links li a:hover {
@@ -183,23 +192,29 @@ footer {
 /* Carrusel de Cursos y Certificaciones */
 .certifications-carousel {
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
+    gap: 1rem;
+    overflow-x: auto; /* Permite deslizar horizontalmente */
+    scroll-snap-type: x mandatory; /* Mejora la experiencia de deslizamiento */
+    padding: 1rem;
+}
+.certifications-carousel::-webkit-scrollbar {
+    display: none; /* Oculta el scrollbar */
 }
 
 .course {
-    flex: 0 0 33.33%;
+    flex: 0 0 auto; /* Mantiene un tamaño fijo en horizontal */
+    scroll-snap-align: center; /* Centra el elemento en scroll */
     text-align: center;
-    transition: transform 0.5s ease;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .certification {
-    flex: 0 0 33.33%;
+    flex: 0 0 auto; /* Mantiene un tamaño fijo en horizontal */
+    scroll-snap-align: center; /* Centra el elemento en scroll */
     text-align: center;
-    transition: transform 0.5s ease;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .course img {
@@ -318,31 +333,25 @@ footer {
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
     body {
-        background-color: #333; /* Cambia el fondo en móviles para verificar */
-    }
-    .machine-table {
-        width: 100%;
+        margin-left: 0; /* Elimina la barra lateral fija */
     }
 
-    .machine-table th, .machine-table td {
-        font-size: 0.9rem;
-        padding: 0.8rem;
+    header {
+        flex-direction: column; /* Apila la cabecera en móvil */
+        align-items: center;
     }
 
-    .machine-table td a {
-        font-size: 1rem;
+    .profile-image {
+        width: 100px;
+        height: 100px;
     }
 
-    .content-container {
-        width: 100%;
-        padding: 0 1rem;
+    .certifications-carousel {
+        padding: 0.5rem;
+        gap: 0.5rem;
     }
 
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .terminal-title {
-        font-size: 1.5rem;
+    .course, .certification {
+        flex: 0 0 80%; /* Ocupa más espacio en móviles */
     }
 }
