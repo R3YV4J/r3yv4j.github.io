@@ -315,3 +315,34 @@ footer {
     cursor: pointer;
     font-size: 1rem;
 }
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        background-color: #333; /* Cambia el fondo en móviles para verificar */
+    }
+    .machine-table {
+        width: 100%;
+    }
+
+    .machine-table th, .machine-table td {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .machine-table td a {
+        font-size: 1rem;
+    }
+
+    .content-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .terminal-title {
+        font-size: 1.5rem;
+    }
+}
